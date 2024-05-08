@@ -7,7 +7,7 @@ import * as Yup from "yup";
 
 import { useId } from "react";
 import { useDispatch } from "react-redux";
-import { addContacts } from "../../redux/contact/operation";
+import { addContacts } from "../../redux/contact/operations";
 
 
 

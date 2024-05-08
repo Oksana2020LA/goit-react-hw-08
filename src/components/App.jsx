@@ -6,7 +6,7 @@ import { Layuot } from "./Layout";
 import { Suspense } from "react";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute";
-import { refreshUser } from "../redux/auth/operation";
+import { refreshUser } from "../redux/auth/operations";
 import { selectIsRefreshing } from "../redux/auth/selector";
 import { selectIsLoading } from "../redux/contact/selector";
 
