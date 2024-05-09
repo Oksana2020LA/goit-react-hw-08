@@ -1,11 +1,6 @@
-/* src/index.css */
-
-body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  height: 100vh;
-  background-color: rgba(255, 203, 171, 0.3);
-  width: 100%;
+li {
+  margin: 0;
+  list-style-type: none;
 }
 
 h1,
@@ -18,8 +13,7 @@ p {
   margin: 0;
 }
 
-ul,
-ol {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -27,14 +21,34 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
+button {
+  cursor: pointer;
 }
 
-main {
-  padding: 40px 20px;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(16, 16, 16, 0.87);
+  background-color: #e9e8da;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+td,
+th {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  padding: 0;
 }

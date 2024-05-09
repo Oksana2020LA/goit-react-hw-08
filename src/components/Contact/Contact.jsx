@@ -1,31 +1,43 @@
-import { FaPerson } from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
-
+import { FaPhoneAlt, FaUser } from "react-icons/fa";
 import css from "./Contact.module.css";
-import { deleteContacts } from "../../redux/contacts/operations";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
+import ModalDelete from "../Modal/ModalDelete";
 
-export const Contact = ({ dataContact: { id, name, number } }) => {
-  const dispatch = useDispatch();
-  const onClickDeleteContact = () => dispatch(deleteContacts(id));
+const Contact = ({ contacts: { name, number, id } }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const formatNumber = (inputNumber) => {
+    const pattern = /(\d{3})(\d{2})(\d{2})/;
+    const formatedNumber = inputNumber.replace(pattern, "$1-$2-$3");
+    return formatedNumber;
+  };
+
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <>
-      <li className={css.liststyle}>
-        <div className={css.information}>
-          <div className={css.name}>
-            <FaPerson />
-            <p>{name}</p>
-          </div>
-          <div className={css.name}>
-            <FaPhoneAlt />
-            <p>{number}</p>
-          </div>
-        </div>
-        <button className={css.btn} onClick={onClickDeleteContact}>
-          Delete
-        </button>
-      </li>
-    </>
+    <div className={css.item}>
+      <div className={css.paragraph}>
+        <p className={css.paragraphName}>
+          <FaUser className={css.icon} />
+          {name}
+        </p>
+        <p>
+          <FaPhoneAlt className={css.user} />
+          {formatNumber(number)}
+        </p>
+      </div>
+      <button className={css.button} type="button" onClick={handleOpen}>
+        Delete
+      </button>
+      <ModalDelete isOpen={isOpen} onClose={handleClose} contactId={id} />
+    </div>
   );
 };
+
+export default Contact;

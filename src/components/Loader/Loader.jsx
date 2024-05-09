@@ -1,17 +1,16 @@
-import { Puff } from "react-loader-spinner";
-import css from "./Loader.module.css";
-export const Loader = () => {
+import { ProgressBar } from "react-loader-spinner";
+
+const Loader = () => {
   return (
-    <div className={css.modal}>
-      <Puff
-        visible={true}
-        height="300"
-        width="300"
-        ariaLabel="puff-loading"
-        wrapperStyle={{}}
-        wrapperClass="vortex-wrapper"
-        colors={["red", "green", "blue", "yellow", "orange", "purple"]}
-      />
-    </div>
+    <ProgressBar
+      visible={true}
+      height="80"
+      width="80"
+      color="#4fa94d"
+      ariaLabel="progress-bar-loading"
+      wrapperStyle={{}}
+      wrapperClass=""
+    />
   );
 };
+export default Loader;

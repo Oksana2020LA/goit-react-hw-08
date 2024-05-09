@@ -1,0 +1,35 @@
+.mainBlock {
+  background-image: linear-gradient(#d3e668, #738415);
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  border: 1px solid #757575;
+}
+
+.text {
+  padding: 0 16px;
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: start;
+  text-indent: 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.textLast {
+  padding: 0 16px;
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.link {
+  display: inline-block;
+  color: #131413;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}

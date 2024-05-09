@@ -1,13 +1,21 @@
-.header {
+.nav {
+  margin-top: 8px;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-image: linear-gradient(#e5be7b, #e1cda2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #e3b34c;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  font-weight: 600;
+  padding: 24px 16px;
 }
 
-.active {
-  color: brown;
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1818;
+  text-transform: uppercase;
 }

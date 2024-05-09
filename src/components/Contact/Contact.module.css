@@ -1,34 +1,37 @@
-.liststyle {
-  display: flex;
-  padding: 20px;
-  width: 330px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: rgba(233, 143, 92, 0.5);
+.icon {
+  margin-right: 8px;
 }
 
-.information {
+.user {
+  margin-right: 8px;
+}
+
+.item {
+  padding: 16px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 16px;
+}
+
+.paragraph {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
-  margin-right: auto;
+  gap: 8px;
+  text-align: start;
 }
 
-.btn {
-  height: 40px;
-  width: 80px;
-  margin: auto 0;
-  background-color: gainsboro;
-  cursor: pointer;
-  border-radius: 13px;
-  transition: 350ms;
+.paragraphName {
+  width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.btn:is(:hover, :focus) {
-  background-color: rgba(255, 104, 70, 0.5);
-}
-
-.name {
-  display: flex;
-  gap: 10px;
+.button {
+  padding: 4px 16px;
+  border-radius: 8px;
+  border: 1px solid rgb(20, 20, 20);
+  height: 36px;
 }
